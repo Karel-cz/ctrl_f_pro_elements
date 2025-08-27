@@ -1,0 +1,35 @@
+{
+  "name": "@karel/ctrl_f_pro_elements",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/ctrlfpro-ui-elements.umd.js",
+  "module": "dist/ctrlfpro-ui-elements.mjs",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karel-cz/ctrl_f_pro_elements.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Karel-cz/ctrl_f_pro_elements/issues"
+  },
+  "homepage": "https://github.com/Karel-cz/ctrl_f_pro_elements#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^5.0.1",
+    "vite": "^7.1.3"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  }
+}
