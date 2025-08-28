@@ -38,3 +38,17 @@ export const tabsProps = {
     onChange: PropTypes.func,
     contentMaxHeight: PropTypes.string,
 };
+
+export const inputProps = {
+    ...baseProps,
+    required: PropTypes.bool,
+    placeholder: PropTypes.string,
+    size: PropTypes.oneOf(["small", "medium", "large"]),
+    borderRadius: PropTypes.oneOf(["none", "small", "medium", "large"]),
+    width: PropTypes.string,
+    value: PropTypes.string,
+    name: PropTypes.string,
+    type: PropTypes.string,
+    readOnly: PropTypes.bool,
+    onChange: PropTypes.func,
+};

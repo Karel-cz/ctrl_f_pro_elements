@@ -11,7 +11,6 @@ export default defineConfig({
             fileName: "ctrlfpro-ui-elements",
         },
         rollupOptions: {
-            // IMPORTANT: do not bundle React inside library
             external: ["react", "react-dom", "prop-types"],
             output: {
                 globals: {
