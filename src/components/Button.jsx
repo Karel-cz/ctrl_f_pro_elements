@@ -53,25 +53,30 @@ function Button({
     ...customStyle,
   };
 
+  // helper pro ikonku (string → <i>, jinak nechá původní node)
+  const renderIcon = (ic, extraStyle) => {
+    if (!ic) return null;
+    if (typeof ic === "string") {
+      return <i className={`mdi ${ic}`} style={extraStyle} />;
+    }
+    return <span style={extraStyle}>{ic}</span>;
+  };
+
   return (
     <>
       {/* add keyframes only once */}
       <style>{keyframes}</style>
       <button style={style} onClick={onClick} disabled={disabled} title={tooltip}>
         {/* left icons */}
-        {icon && <span style={{ marginRight: label ? "6px" : 0 }}>{icon}</span>}
-        {animeIcon && (
-          <span style={{ ...spinStyle, marginRight: label ? "6px" : 0 }}>{animeIcon}</span>
-        )}
+        {renderIcon(icon, { marginRight: label ? "6px" : 0 })}
+        {renderIcon(animeIcon, { ...spinStyle, marginRight: label ? "6px" : 0 })}
 
         {/* label */}
         {label}
 
         {/* right icons */}
-        {iconRight && <span style={{ marginLeft: label ? "6px" : 0 }}>{iconRight}</span>}
-        {animeIconRight && (
-          <span style={{ ...spinStyle, marginLeft: label ? "6px" : 0 }}>{animeIconRight}</span>
-        )}
+        {renderIcon(iconRight, { marginLeft: label ? "6px" : 0 })}
+        {renderIcon(animeIconRight, { ...spinStyle, marginLeft: label ? "6px" : 0 })}
       </button>
     </>
   );
