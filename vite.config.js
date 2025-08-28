@@ -10,7 +10,15 @@ export default defineConfig({
             fileName: "ctrlfpro-ui-elements",
         },
         rollupOptions: {
-            external: ["react", "react-dom"], // nebal React dovnitř
+            // IMPORTANT: do not bundle React inside library
+            external: ["react", "react-dom", "prop-types"],
+            output: {
+                globals: {
+                    react: "React",
+                    "react-dom": "ReactDOM",
+                    "prop-types": "PropTypes",
+                },
+            },
         },
     },
 });
