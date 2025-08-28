@@ -1,12 +1,5 @@
-
-
 function Popover() {
-
-    return (
-        <>
-            PopOver
-        </>
-    )
+  return <>PopOver</>;
 }
 
-export default Popover
+export default Popover;
